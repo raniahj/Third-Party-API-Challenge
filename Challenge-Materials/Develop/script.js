@@ -45,3 +45,40 @@ $(".saveBtn").on("click", function () {
 
     localStorage.setItem(hour, descr);
 })
+
+ // Save user entry on button click
+ $(".savePlanButton").on("click", saveEntry);
+
+ // Grab whatever is in local storage for that hour
+ checkSchedule();
+
+ function checkSchedule() {
+    $("#9").val(localStorage.getItem("9"));
+    $("#10").val(localStorage.getItem("10"));
+    $("#11").val(localStorage.getItem("11"));
+    $("#12").val(localStorage.getItem("12"));
+    $("#13").val(localStorage.getItem("13"));
+    $("#14").val(localStorage.getItem("14"));
+    $("#15").val(localStorage.getItem("15"));
+    $("#16").val(localStorage.getItem("16"));
+    $("#17").val(localStorage.getItem("17"));
+  }
+
+// Make sure local storage checked on page load to show plans
+window.onload = checkSchedule();
+
+ 
+//Page refreshed events persist
+// run an each for .time-block
+//$(".time-block").each(function () {
+  //  var savedhourNode = $(this).children(".hour");
+    //var savedHour = savedhourNode[0].innerHTML;
+    //console.log('savedHour: ', savedHour);
+    //var savedVal = localStorage.getItem(savedHour);
+    
+    //console.log(savedVal)
+
+    //if (savedVal !== null) {
+      //  console.log('IT RAN')
+        //$(this).children(".description").text(savedVal);
+    //};
