@@ -67,18 +67,3 @@ $(".saveBtn").on("click", function () {
 // Make sure local storage checked on page load to show plans
 window.onload = checkSchedule();
 
- 
-//Page refreshed events persist
-// run an each for .time-block
-//$(".time-block").each(function () {
-  //  var savedhourNode = $(this).children(".hour");
-    //var savedHour = savedhourNode[0].innerHTML;
-    //console.log('savedHour: ', savedHour);
-    //var savedVal = localStorage.getItem(savedHour);
-    
-    //console.log(savedVal)
-
-    //if (savedVal !== null) {
-      //  console.log('IT RAN')
-        //$(this).children(".description").text(savedVal);
-    //};
